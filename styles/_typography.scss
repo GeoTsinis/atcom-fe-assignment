@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400&family=DM+Sans:wght@400&family=Roboto+Mono:wght@400&display=swap");
+
+// HEADERS
+h1,
+h2,
+h3,
+h4 {
+  font-family: $ff-serif;
+  font-weight: 400;
+}
+
+.header-hero {
+  font-size: 8.75rem;
+  line-height: 0.8;
+  letter-spacing: -5%;
+}
+
+h1 {
+  font-size: 3.75rem;
+  line-height: 0.9;
+  letter-spacing: -3%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  letter-spacing: -4%;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1;
+  letter-spacing: -3%;
+}
+
+// BODY TEXT
+
+p {
+  font-family: $ff-sans;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  letter-spacing: -0.5%;
+  margin: 0;
+}
+
+.headline {
+  color: $headline-color;
+}
+
+.paragraph {
+  color: $paragraph-color;
+}
+
+.link {
+  text-decoration: none;
+  font-family: $ff-sans;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.label {
+  font-family: $ff-mono;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: -1%;
+  color: $green-dark;
+}
+
+.caption {
+  font-family: $ff-mono;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: -1%;
+  color: $green-dark;
+}
+
+.display-statistics {
+  font-family: $ff-sans;
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: -4%;
+  color: $gray-1;
+}

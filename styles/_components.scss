@@ -1,0 +1,101 @@
+@import "_breakpoints";
+
+.button {
+  @include button-primary;
+}
+
+.swiper-nav-container {
+  position: absolute;
+  top: 1.25rem;
+  right: 2.5rem;
+  display: flex;
+  gap: 0.625rem;
+  z-index: 10;
+
+  .my-swiper-button-next,
+  .my-swiper-button-prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    background: $white;
+    @include flex-center;
+    cursor: pointer;
+
+    img {
+      width: 0.3125rem;
+      height: auto;
+    }
+  }
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  padding: 0 1rem 7.5rem 1rem;
+
+  @include breakpoint-min($bp-md) {
+    padding: 0 0 7.5rem 0;
+  }
+
+  @include breakpoint-min($bp-lg) {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+
+  img {
+    border-radius: 1.875rem;
+    height: 21.4375rem;
+    width: 100%;
+    object-fit: cover;
+
+    @include breakpoint-min($bp-md) {
+      height: 45rem;
+    }
+
+    @include breakpoint-min($bp-lg) {
+      height: 41.517rem;
+      width: 50%;
+    }
+  }
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 0.0625rem solid $dividers-1;
+    gap: 3.125rem;
+    padding-top: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+
+    @include breakpoint-min($bp-lg) {
+      padding-left: 3.125rem;
+    }
+  }
+}
+
+.hero-image {
+  @include breakpoint-max($bp-md) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  img {
+    border-radius: 1.875rem;
+    height: 37.5rem;
+    width: 100%;
+    object-fit: cover;
+
+    @include breakpoint-min($bp-md) {
+      height: 51.875rem;
+    }
+
+    @include breakpoint-min($bp-lg) {
+      height: 41.517rem;
+    }
+  }
+}

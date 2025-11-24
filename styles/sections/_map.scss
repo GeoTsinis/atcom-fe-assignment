@@ -1,0 +1,64 @@
+.map {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 1rem 6.25rem 1rem;
+    border-top: 1px solid $dividers-1;
+    gap: 5rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin-bottom: 3.75rem;
+
+    @include breakpoint-min($bp-md) {
+      margin-bottom: 6.25rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+
+    @include breakpoint-max($bp-md) {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+
+      &.dragging {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3.75rem;
+      padding: 3.75rem 1.875rem 1.25rem 0;
+      min-width: 15rem;
+
+      border-top: 1px solid $dividers-1;
+    }
+  }
+}

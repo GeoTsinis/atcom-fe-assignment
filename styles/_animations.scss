@@ -1,0 +1,76 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.scroll-fade-in {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.scroll-slide-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-fade-in.in-viewport {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.scroll-slide-up.in-viewport {
+  animation: slideUp 1s ease-out forwards;
+}
+
+.scroll-slide-in-left.in-viewport {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-fade-in,
+.scroll-slide-up,
+.scroll-slide-left {
+  will-change: transform, opacity;
+}
+
+.hero-image img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
